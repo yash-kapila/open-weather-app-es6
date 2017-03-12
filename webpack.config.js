@@ -19,10 +19,12 @@ module.exports = function () {
 		},
 		module: {
 			rules: [
+				{ test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }) },
 				{ test: /\.scss$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' }) },
 				{ test: /\.html$/, loader: 'ngtemplate-loader?relativeTo=' + (path.resolve(__dirname, './app')) + '/!html-loader' },
 				{ test: /\.(jpg|png|gif)$/, loader: 'file-loader?name=images/[name].[ext]' },
-				{ test: /\.js$/, exclude: /(node_modules)/, loader: ['ng-annotate-loader', 'babel-loader?presets[]=es2015'] }
+				{ test: /\.js$/, exclude: /(node_modules)/, loader: ['ng-annotate-loader', 'babel-loader?presets[]=es2015'] },
+				{ test: /\.(ttf|eot|woff|woff2|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader?name=fonts/[name].[ext]' }
 			]
 		},
 		plugins: [

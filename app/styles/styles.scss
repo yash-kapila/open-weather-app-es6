@@ -41,62 +41,77 @@ body {
 
 /*****************/
 
-.home-container .home-header-container {
-    color: #FFFFFF;
-    margin: 7% 0 5% 0;
+.home-container {
+    .home-header-container {
+        color: #FFFFFF;
+        margin: 7% 0 5% 0;
+    }
 }
 
-.cities-container .cities-data .table-heading, .cities-container .cities-data .table-body {
-    color: #FFFFFF;
+.cities-container {
+    .cities-data {
+        .table-heading {
+            color: #FFFFFF;
+            vertical-align: middle;
+
+            tr {
+                cursor: pointer;
+            }
+        }
+
+        .table-body {
+            color: #FFFFFF;
+
+            tr {
+                cursor: pointer;
+
+                .middle {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .data-retrieving-container {
+        color: #FFFFFF;
+
+        .data-retrieving-message {
+            padding: 5% 0;
+        }
+    }
 }
 
-.cities-container .cities-data .table-heading, .cities-container .cities-data .table-body tr {
-    cursor: pointer;
-}
+.details-container {
+    .details-header {
+        color: #FFFFFF;
+        margin-top: 8%;
 
-.cities-container .cities-data .table-heading, .cities-container .cities-data .table-body .middle {
-    vertical-align: middle;
-}
+        .details-go-back {
+            margin-top: 2%;
+        }
+    }
 
-.cities-container .cities-data .table-heading, .cities-container .cities-data .table-body .next-icon {
-    cursor: pointer;
-}
+    .details-main {
+        margin-top: 5%;
+        color: #FFFFFF;
 
-.cities-container .data-retrieving-container {
-    color: #FFFFFF;
-}
+        .details-main-table-container {
+            .middle {
+                vertical-align: middle;
+            }
 
-.cities-container .data-retrieving-container .data-retrieving-message {
-    padding: 5% 0;
-}
+            .back-icon {
+                cursor: pointer;
+            }
+        }
+    }
 
-.details-container .details-header {
-    color: #FFFFFF;
-    margin-top: 8%;
-}
+    .data-retrieving-container {
+        color: #FFFFFF;
+        margin-top: 20%;
 
-.details-container .details-header .details-go-back {
-    margin-top: 2%;
-}
-
-.details-container .details-main {
-    margin-top: 5%;
-    color: #FFFFFF;
-}
-
-.details-container .details-main .details-main-table-container .middle {
-    vertical-align: middle;
-}
-
-.details-container .data-retrieving-container {
-    color: #FFFFFF;
-    margin-top: 20%;
-}
-
-.details-container .data-retrieving-container .data-retrieving-message {
-    padding: 5% 0;
-}
-
-.details-container .details-main .details-main-table-container .back-icon {
-    cursor: pointer;
+        .data-retrieving-message {
+            padding: 5% 0;
+        }
+    }
 }
