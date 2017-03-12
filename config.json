@@ -1,0 +1,15 @@
+{
+    "name": "Open Weather App - ES6",
+    "vendor": [
+        "jquery",
+        "angular",
+        "angular-route",
+        "bootstrap"
+    ],
+    "entry": [
+        "./app/index.js",
+        "webpack-dev-server/client?http://localhost:8080/",
+        "webpack/hot/dev-server"
+    ],
+    "index": "./app/index.html"
+}
