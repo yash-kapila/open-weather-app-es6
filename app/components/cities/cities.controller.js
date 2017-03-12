@@ -25,6 +25,6 @@ export default class CitiesCtrl {
     viewSeaLevelDetails(record) {
         var url = '/' + record.id;
         this.routeService.goToDetailsView(url);
-    }
+    };
 
 };

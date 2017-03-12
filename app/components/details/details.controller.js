@@ -1,5 +1,6 @@
 export default class DetailsCtrl {
     constructor($routeParams, spinnerService, dataService, appService, Common, DetailsTemplate, routeService) {
+        console.log("Inside constructor");
         this.$routeParams = $routeParams;
         this.spinnerService = spinnerService;
         this.dataService = dataService;
@@ -15,10 +16,12 @@ export default class DetailsCtrl {
         this.cityName = '';
         this.countryCode = '';
         this.isDataLoaded = false;
+        console.log("Inside init");
         this.getSeaLevelData(this.$routeParams.id);
     };
 
     getSeaLevelData(id) {
+        console.log("ID is: " + id);
         this.dataService.getSeaLevelData(id)
             .then(response => {
                 this.forecastList = this.appService.getHours(response.data.list);
