@@ -85,8 +85,8 @@ function server() {
 				'/api/*': {
 					target: 'http://api.openweathermap.org',
 					secure: true,
-					rewrite: function (req) {
-						req.url = req.url.replace(/^\/api(.+)$/, '$1');
+					pathRewrite: {
+						'/api/': ''
 					}
 				}
 			}
