@@ -1,5 +1,5 @@
 import ForecastCtrl from './forecast.controller.js';
-import template from './template.constant.js';
+import template from './forecast.html';
 
 let forecastComponent = {
     templateUrl: template,

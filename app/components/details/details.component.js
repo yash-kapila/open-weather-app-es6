@@ -2,8 +2,8 @@
     CityDetails component and its controller are defined in this file.
 */
 
+import template from './details.html';
 import DetailsCtrl from './details.controller.js';
-import template from './template.constant.js';
 
 let DetailsComponent = {
     templateUrl: template,
